@@ -1,22 +1,21 @@
+import 'express-async-errors'
 import Express from 'express'
-import UserControllers from './controllers/UserControllers'
-import PostControllers from './controllers/PostControllers'
+import 'dotenv/config'
+import { errorMiddleware } from '../middlewares/error'
+import { router } from './routes'
 
 const app = Express()
+
 app.use(Express.json())
-const PORT = 8000
 
-app.get('/', (req, res) => {
-  return res.send({ message: 'Hello World ' })
-})
+app.use(router)
 
-app.post('/createUser', UserControllers.createUser)
-app.post('/createPost', PostControllers.createPost)
-app.get('/listPost/:id', PostControllers.listPost)
-app.get('/listUser/:id', UserControllers.listUser)
-app.put('/updatePost', PostControllers.updatePost)
-app.delete('/deletePost/:id', PostControllers.deletePost)
+app.use(errorMiddleware)
 
-app.listen(PORT, () => {
-  console.log(`server is running ${PORT}`)
-})
+const start = () => {
+  app.listen(process.env.PORT_SERVIDOR || 8000, () => {
+    console.log(`server is running ${process.env.PORT_SERVIDOR}`)
+  })
+}
+
+start()
