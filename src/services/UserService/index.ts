@@ -1,5 +1,5 @@
-import { NotFoundError } from '../../helpers/api-erros'
-import prisma from '../../prisma'
+import { NotFoundError } from '../../../helpers/api-erros'
+import prisma from '../../../prisma'
 
 interface UserProps {
   id: number | string
@@ -20,4 +20,4 @@ class UserService {
   }
 }
 
-export { UserService }
+export default UserService

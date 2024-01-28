@@ -2,8 +2,8 @@ import {
   BadRequestError,
   NotFoundError,
   UnauthorizedError
-} from '../../helpers/api-erros'
-import prisma from '../../prisma'
+} from '../../../helpers/api-erros'
+import prisma from '../../../prisma'
 
 interface UpdateUserProps {
   id: number | string
@@ -49,4 +49,4 @@ class UpdateUserService {
   }
 }
 
-export { UpdateUserService }
+export default UpdateUserService

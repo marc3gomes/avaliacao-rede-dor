@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
-import { UserService } from '../services/UserService'
+import UserService from '../services/UserService'
 
-class DeleteUserController {
+class UserController {
   async handle(req: Request, res: Response) {
     const { id } = req.params
     const userService = new UserService()
@@ -12,4 +12,4 @@ class DeleteUserController {
   }
 }
 
-export default DeleteUserController
+export default UserController

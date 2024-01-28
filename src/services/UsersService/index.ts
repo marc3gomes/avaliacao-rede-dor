@@ -1,4 +1,4 @@
-import prisma from '../../prisma'
+import prisma from '../../../prisma'
 
 class UsersService {
   async execute() {
@@ -7,4 +7,4 @@ class UsersService {
   }
 }
 
-export { UsersService }
+export default UsersService

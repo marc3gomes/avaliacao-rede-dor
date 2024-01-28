@@ -1,5 +1,5 @@
-import { BadRequestError, NotFoundError } from '../../helpers/api-erros'
-import prisma from '../../prisma'
+import { NotFoundError } from '../../../helpers/api-erros'
+import prisma from '../../../prisma'
 
 interface DeleteUserProps {
   id: number | string
@@ -7,10 +7,6 @@ interface DeleteUserProps {
 
 class DeleteUserService {
   async execute({ id }: DeleteUserProps) {
-    if (!id) {
-      throw new BadRequestError('Solicitação invalida!')
-    }
-
     const user = await prisma.user.findUnique({
       where: {
         id: Number(id)
@@ -31,4 +27,4 @@ class DeleteUserService {
   }
 }
 
-export { DeleteUserService }
+export default DeleteUserService
