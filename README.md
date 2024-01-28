@@ -16,7 +16,7 @@ Para rodar esse projeto em seu ambiente de desenvolvimento, certifique-se de ter
 
 Clone o repositório para seu ambiente de desenvolvimento.
 
-`git clone https://github.com/marc3gomes/avaliacao-dor.git`
+`git clone https://github.com/marc3gomes/avaliacao-rede-dor.git`
 
 Entre na pasta em que foi clonado o projeto.
 
@@ -103,6 +103,34 @@ Se você não souber como importar o `json` em sua ferramenta teste, recomendo q
 ```
 
 - **Apagar usuário:** `PUT` `http://localhost:3000/users/` `id`
+
+---
+
+## Gestão de Branchs
+
+É necessário que a cada edição de código, ou seja: *inserção*, *refatoração*, *correção* ou *novas funcionalidades*, seja criada uma `branch` a partir da `develop`.
+
+(Fixa)**master:**
+
+- Reflete a versão estável e de produção do código.
+- Commits direcionados a esta branch devem ser feitos por meio de (PRs) utilizando a branch develop.
+
+(Fixa)**develop:**
+
+- Reflete a última versão de desenvolvimento.
+- Feature branches são mescladas aqui para testes antes de serem enviadas para a main.
+
+(Variável)**feature/nome-da-feature:**
+
+- Cada nova feature é desenvolvida em uma branch separada.
+- As branches de feature são mescladas na develop via pull request.
+
+(Variável)**hotfix/nome-do-hotfix:**
+
+- Criada a partir da master para correção de bugs críticos em produção.
+- Mesclada de volta na main e também na develop.
+
+---
 
 ## Informações adicionais
 
