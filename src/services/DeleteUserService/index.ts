@@ -1,4 +1,4 @@
-import { NotFoundError } from '../../../helpers/api-erros'
+import { NotFoundError } from '../../helpers/api-erros'
 import prisma from '../../../prisma'
 
 interface DeleteUserProps {

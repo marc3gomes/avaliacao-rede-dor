@@ -1,4 +1,4 @@
-import { BadRequestError, UnauthorizedError } from '../../../helpers/api-erros'
+import { BadRequestError, UnauthorizedError } from '../../helpers/api-erros'
 import prisma from '../../../prisma'
 
 interface CreateUserProps {

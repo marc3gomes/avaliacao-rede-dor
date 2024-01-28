@@ -2,7 +2,7 @@ import {
   BadRequestError,
   NotFoundError,
   UnauthorizedError
-} from '../../../helpers/api-erros'
+} from '../../helpers/api-erros'
 import prisma from '../../../prisma'
 
 interface UpdateUserProps {
