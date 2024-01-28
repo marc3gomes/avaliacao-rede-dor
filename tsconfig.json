@@ -111,6 +111,7 @@
     "./jest.config.ts",
     "./dist",
     "./tests",
+    "./Insomnia_routes.json",
     "./src/services/**/test.ts"
   ]
 }

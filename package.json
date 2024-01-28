@@ -18,8 +18,8 @@
       "yarn test --bail --findRelatedTests --runInBand"
     ]
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["API Rest", "RESTful", "nodejs", "express", "prisma"],
+  "author": "Marcelo Rodrigues Gomes de Oliveira",
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^5.8.1",
