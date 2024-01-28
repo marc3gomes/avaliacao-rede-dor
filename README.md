@@ -1,15 +1,13 @@
 # Avaliação Técnica de Engenharia de Software Nível Júnior
 
-Rede D’or - Arquitetura e Engenharia de Software Corporativas
+#### Rede D’or - Arquitetura e Engenharia de Software Corporativas
 
 > Esse repositório é destinado a armazenar o código desenvolvido durante a avaliação.
 
-
 ## Início
 
-*Pré-requisitos:*
-
-Para rodar esse projeto em seu ambiente de desenvolvimento, certifique-se de ter o `node` e `npm` instalado em sua versão `lts`.
+Pré-requisitos:
+> Para rodar esse projeto em seu ambiente de desenvolvimento, certifique-se de ter o `node` e `npm` instalado em sua versão `lts`.
 
 
 ### Basta seguir os passos:
@@ -104,7 +102,6 @@ Se você não souber como importar o `json` em sua ferramenta teste, recomendo q
 
 > Antes de alterar o código, certifique-se de estar na branch `feature`.
 
-
 Visando manter um `histórico de commits` sem sujeiras e sem possíveis dano temos um `hook pre-commit` realizando verificações automatizadas através do `eslint` e `jest` para possíveis erros de `Typescript, escrita do código e testes de integração`. 
 
 Para continuar prezando pelo histórico, devemos seguir as práticas:
@@ -114,20 +111,20 @@ Para continuar prezando pelo histórico, devemos seguir as práticas:
 - Utilizar o `git reset` apenas em branches separadas da develop ou master
 - Utilizar o `git revert` para a master se necessário
 
-##### Branchs
+#### Branchs
 
 (Fixa) **master:**
 - Reflete a versão estável e de produção do código.
 - Commits direcionados a esta branch devem ser feitos por meio de (PRs) utilizando a branch develop.
-- 
+  
 (Fixa) **develop:**
 - Reflete a última versão de desenvolvimento.
 - Feature branches são mescladas aqui para testes antes de serem enviadas para a main.
-- 
+  
 (Variável) **feature/nome-da-feature:**
 - Cada nova feature é desenvolvida em uma branch separada.
 - As branches de feature são mescladas na develop via pull request.
-- 
+  
 (Variável) **hotfix/nome-do-hotfix:**
 - Criada a partir da master para correção de bugs críticos em produção.
 - Mesclada de volta na main e também na develop.
@@ -158,5 +155,4 @@ Para continuar prezando pelo histórico, devemos seguir as práticas:
 
 **Dicas**:
 Configure o autocorrect do git para facilitar seu trabalho.
-
 `git config --global help.autocorret 1`
