@@ -149,7 +149,7 @@ Para continuar prezando pelo histórico, devemos seguir as práticas:
 - Revisão do código da mesclagem.
 - Revisão do testes e build pelo `CI` do `Github Actions`
 
-Ao criar um `Pull Request` para as branches `master` ou `develop` será executado um teste de CI que irá seguir as orientações estabelecidas no arquivo dentro da pasta do ``.github`. Será realizado testes do `jest` e o `build` da aplicação.
+Ao criar um `Pull Request` para as branches `master` ou `develop` será executado um teste de CI que irá seguir as orientações estabelecidas no arquivo dentro da pasta do `.github`. Será realizado testes do `jest` e o `build` da aplicação.
 
 Para garantir que esse fluxo será seguido da forma mais fidedigna possível, recomendo a utilização da ferramenta [git-flow cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/).
 
