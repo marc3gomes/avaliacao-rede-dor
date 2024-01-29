@@ -112,6 +112,7 @@
     "./dist",
     "./tests",
     "./Insomnia_routes.json",
+    "./engenharia-sw-avaliacao.pdf",
     "./src/services/**/test.ts"
   ]
 }
