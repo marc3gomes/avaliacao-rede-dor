@@ -18,6 +18,9 @@ Clone o repositório para seu ambiente de desenvolvimento.
 
 Entre na pasta em que foi clonado o projeto.
 
+**Atenção:**
+Antes de iniciar o projeto, renomeie o arquivo `.env.example`  para apenas `.env`.
+
 Você pode iniciar o projeto com:
 
 ```
@@ -132,16 +135,21 @@ Para continuar prezando pelo histórico, devemos seguir as práticas:
 
 ## Fluxo do Pull Requests:
 
-1. Branchs do tipo `f**eature` Pull Requests:**
+1. Branchs do tipo `feature` Pull Requests:**
 - Criar PRs para mesclar branches de `feature` na `develop`.
 - Revisão de código da mesclagem.
+- Revisão do testes e build pelo `CI` do `Github Actions`
   
-2. Branchs do tipo `h**otfix` Pull Requests:**
+2. Branchs do tipo `hotfix` Pull Requests:**
 - Criar PRs para mesclar hotfixes (na `master`  em extrema `urgência`) e na `develop.`
+- Revisão do testes e build pelo `CI` do `Github Actions`
   
 1. **Releases:**
 - Quando a `develop` atingir um estado estável, criar um PR para mesclar na `master` e adicionar uma `tag de versão.`
+- Revisão do código da mesclagem.
+- Revisão do testes e build pelo `CI` do `Github Actions`
 
+Ao criar um `Pull Request` para as branches `master` ou `develop` será executado um teste de CI que irá seguir as orientações estabelecidas no arquivo dentro da pasta do ``.github`. Será realizado testes do `jest` e o `build` da aplicação.
 
 Para garantir que esse fluxo será seguido da forma mais fidedigna possível, recomendo a utilização da ferramenta [git-flow cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/).
 
@@ -154,6 +162,7 @@ Para garantir que esse fluxo será seguido da forma mais fidedigna possível, re
 - Para testes unitários e de integrações, usamos o `jest` e `supertest`
 - O banco de dados utilizado foi o SQLite.
 - Para interação com o banco de dados, foi utilizado o `ORM Prisma`
+- Para ter testes de CI na abertura do pull_requests `Github Actions`
 
 **Extensão do VSCode**
 - Eslint
@@ -171,5 +180,7 @@ Para garantir que esse fluxo será seguido da forma mais fidedigna possível, re
 - [Git-flow](https://danielkummer.github.io/git-flow-cheatsheet/)
 
 **Dicas**:
-Configure o autocorrect do git para facilitar seu trabalho.
+- Configure o autocorrect do git para facilitar seu trabalho.
 `git config --global help.autocorret 1`
+
+- Caso o arquivo dev.db tenha sido alterado os testes do jest irá quebrar.
