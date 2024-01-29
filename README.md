@@ -129,6 +129,22 @@ Para continuar prezando pelo histórico, devemos seguir as práticas:
 - Criada a partir da master para correção de bugs críticos em produção.
 - Mesclada de volta na main e também na develop.
 
+
+## Fluxo do Pull Requests:
+
+1. Branchs do tipo `f**eature` Pull Requests:**
+- Criar PRs para mesclar branches de `feature` na `develop`.
+- Revisão de código da mesclagem.
+  
+2. Branchs do tipo `h**otfix` Pull Requests:**
+- Criar PRs para mesclar hotfixes (na `master`  em extrema `urgência`) e na `develop.`
+  
+1. **Releases:**
+- Quando a `develop` atingir um estado estável, criar um PR para mesclar na `master` e adicionar uma `tag de versão.`
+
+
+Para garantir que esse fluxo será seguido da forma mais fidedigna possível, recomendo a utilização da ferramenta [git-flow cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/).
+
 ---
 
 ## Informações adicionais
@@ -144,7 +160,7 @@ Para continuar prezando pelo histórico, devemos seguir as práticas:
 - Prettier
 - Editorconfig
 
-**Bibliotecas para consulta**
+**Documentações**
 - [Express](https://expressjs.com/en/guide/routing.html)
 - [Prisma](https://www.prisma.io/docs)
 - [Jest](https://jestjs.io/pt-BR/docs/getting-started)
@@ -152,6 +168,7 @@ Para continuar prezando pelo histórico, devemos seguir as práticas:
 - [Husky](https://typicode.github.io/husky/)
 - [lint-staged](https://github.com/lint-staged/lint-staged)
 - [Prettier](https://prettier.io/docs/en/integrating-with-linters.html)
+- [Git-flow](https://danielkummer.github.io/git-flow-cheatsheet/)
 
 **Dicas**:
 Configure o autocorrect do git para facilitar seu trabalho.
